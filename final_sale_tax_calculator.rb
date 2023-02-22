@@ -1,6 +1,5 @@
 class Sale_tax
     attr_accessor :input , :total_tax ,:exemted_items ,:list 
-    # def initialize
 
     def add_items
         print "Nmber of items to be add : "
@@ -16,8 +15,6 @@ class Sale_tax
         @total_tax = 0
         @list = {}
         @list.default = 0
-        @exemted_items = ["food" , "medical", "book" ,"bar" ,"headache pills" ,"chocolates" ]
-        
         @input.each do |item|
             curr_item_array = item.split(" at ")
 
@@ -66,7 +63,10 @@ obj = Sale_tax.new
 obj.add_items
 
 # all items which are exmeted from tax are added in exemted array
+<<<<<<< HEAD
 obj.exemted_items = ["food" , "medical", "book" ,"bar" ,"headache pills" ,"chocolates" ]
+=======
+>>>>>>> bfed9039fc0b9d2f60a25d6a7ae74e1164132927
 
 # tax_calculate is called which calculate tax and create list 
 obj.tax_calculate
