@@ -1,5 +1,6 @@
 class Sale_tax
     attr_accessor :input , :total_tax ,:exemted_items ,:list 
+    # def initialize
 
     def add_items
         print "Nmber of items to be add : "
