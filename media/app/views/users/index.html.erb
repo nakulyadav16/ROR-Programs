@@ -1,0 +1,13 @@
+<h1>!Mediagram!</h1>
+
+<h1>All Users</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+        <a href="/users/<%= user.id %>" > <%=user.name%> </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Add New User" , new_user_path%>

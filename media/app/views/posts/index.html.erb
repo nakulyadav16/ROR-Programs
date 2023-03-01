@@ -1,0 +1,27 @@
+<h2><%=@user.name%> Posts<h2>
+---------------------------------------
+<br>
+<%@user.posts.each do |post| %>
+    <img src="<%=post.photo%>" alt="photo in the post " width="300" height="350">
+    <br>
+    Caption : <%=post.caption%>
+    <br>
+    Like no. : <%=post.like%> 
+
+    <%# <%=link_to "like", custom_path(@user) %>
+
+    <%= link_to "like post", [post.user, post , :addlike] %>
+
+    <br>
+    <%= link_to "Destroy post", [post.user, post], data: {
+        turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                } %><br>---------------------------------------<br>
+<% end %>
+
+<%= link_to "Add New post", new_user_post_path(@user) %>
+<script>
+
+const addlike () => { console.log("clicke") }
+
+</script>
