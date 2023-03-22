@@ -1,0 +1,16 @@
+<h2>Add New post</h2>
+
+<%= form_with model: [ @user, @user.posts.build ] do |form| %>
+    <p>
+        <%= form.label :photo %><br>
+        <%= form.text_field :photo %>
+    </p>
+    <p>
+        <%= form.label :caption %><br>
+        <%= form.text_area :caption %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
+
